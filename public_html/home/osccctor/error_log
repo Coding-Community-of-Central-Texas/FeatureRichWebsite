@@ -1,0 +1,1 @@
+[27-Jan-2025 09:22:34 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'admin'@'localhost' (using password: YES) in /home/osccctor/public_html/home/osccctor/lib/db/mysqli.php on line 136

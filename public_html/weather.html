@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Widget</title>
+    <style>
+        .weather-widget {
+            border: 1px solid #ddd;
+            padding: 15px;
+            width: 300px;
+            text-align: center;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        .weather-widget .location {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .weather-widget .temperature {
+            font-size: 48px;
+            font-weight: bold;
+            color: #f39c12;
+        }
+        .weather-widget .description {
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-widget" id="weather-widget">
+        <div class="location" id="location">Loading...</div>
+        <div class="temperature" id="temperature"></div>
+        <div class="description" id="description"></div>
+    </div>
+    <script src="/site_script/weather.js"></script>
+</body>
+</html>

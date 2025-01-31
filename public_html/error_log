@@ -1,0 +1,1 @@
+[27-Jan-2025 10:50:01 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'new_member'@'localhost' (using password: YES) in /home/osccctor/public_html/php_database.php on line 9
