@@ -1,0 +1,79 @@
+/* Game Logo */
+.game-logo {
+    width: 100px;
+    height: 100px;
+    opacity: 33;
+}
+
+/* Title Styling */
+.NFTitle {
+    font-size: 90px;
+    color: red;
+    text-shadow: 0px 0px 10px black;
+}
+
+.NverFerBG {
+    background-image: url('../api/NeverFearIcon.png');
+    opacity: 20;
+    background-color: rgba(1, 1, 1, 0.6);
+    background-size: auto;
+}
+
+/* Running Character Animation */
+.animation-container {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Increased space for animation */
+    overflow: visible; /* Ensures the sprite isn't cut off */
+}
+
+/* Character Sprite */
+.sprite {
+    position: absolute;
+    bottom: 0;
+    width: 144px; /* 48px * 3 (Correct scaling) */
+    height: 288px; /* 48px * 6 (Keeps proportions) */
+    background: url('../api/Cyborg_run.png') no-repeat 0 0;
+    background-size: 1728px 288px; /* 6 frames properly scaled */
+    animation: run 0.6s steps(6) infinite, move-right 3s linear infinite;
+}
+
+/* Character Running Animation */
+@keyframes run {
+    from { background-position: 0 0; }
+    to { background-position: -1728px 0; } /* Moves through all 6 frames */
+}
+
+/* Move the character across the screen */
+@keyframes move-right {
+    from { left: -150px; } /* Start further left to avoid clipping */
+    to { left: 110%; } /* Move fully off-screen */
+}
+
+/* Cyberpunk Button Styling */
+.glow-button {
+    background: linear-gradient(45deg, #ff0000, #ff7300);
+    border: none;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0 20px #ff0000;
+    text-transform: uppercase;
+    display: inline;
+}
+
+.glow-button:hover {
+    background: linear-gradient(45deg, #ff7300, #ff0000);
+    box-shadow: 0 0 20px #ff7300;
+    transform: scale(1.1);
+}
+
+/* Smaller buttons */
+.glow-button.small {
+    font-size: 16px;
+    padding: 10px 20px;
+    box-shadow: 0 0 8px #ff0000;
+}

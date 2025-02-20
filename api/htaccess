@@ -1,0 +1,20 @@
+RewriteEngine On
+
+# Redirect /api/{endpoint} to endpoint.php with the endpoint as a query parameter
+RewriteRule ^api/([^/]+)/?$ api/endpoint.php?endpoint=$1 [QSA,L]
+
+# Allow JSON file access
+<FilesMatch "\.json$">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+
+<Files "../../config.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+
+# Enable CORS for API calls
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods "POST, GET, OPTIONS"
+Header set Access-Control-Allow-Headers "Content-Type"

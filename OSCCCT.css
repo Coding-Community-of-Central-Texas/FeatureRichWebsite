@@ -1,0 +1,328 @@
+main {
+    background-image: linear-gradient(0deg, rgba(20, 20, 20, 0.5), rgba(0, 219, 0, 0.8)), url(TAMUCTbuilding.jpg);
+    background-size: cover;
+}
+
+.scrollable {
+    flex: 1;
+    overflow-y: auto; 
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.img {
+    border-style: groove;
+    border-width: 5px;
+    border-color: silver;
+}
+
+.paragraph {
+    width: 1100px; 
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+h2 {
+    color: #010101;
+    font-size: 40px;
+    border-style: solid;
+    border-width: 5px;
+    border: #000000;
+    font-family:'Times New Roman', Times, serif;
+    
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; 
+  }
+
+nav { 
+    
+    text-align: left; 
+    font-weight: bold; 
+    font-size: 1.5em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+.logo {
+    position: static;
+    right: 1300px;
+    top: 18px;
+    border: transparent;
+    border-radius: 75px;
+}
+.Pro {
+    margin-top: 50px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: silver; 
+}
+
+.AMicon {
+    position: inherit;
+    border: none; 
+}
+
+.title {
+    background-position: 100%;
+    width: 450px;
+    position: relative;
+    left: 3px;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 0 0 40px #2AFF31;
+}
+button {
+    margin: 3px;
+    padding: 2px 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    border: 3px solid #000000;
+    color: #ffffff;
+    background-color: #66ff00;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    cursor: pointer;
+    height: 70px;
+    width: 150px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 0 30px #feff49;
+}
+
+button:hover {
+    background-color: #32cd32;
+    border-color: #000000;
+    text-decoration: none;
+}
+
+button:active {
+    background-color: #66ff00;
+    border-color: #000000;
+    outline: white;
+    text-decoration: none;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; 
+    width: auto;
+    background-size: cover; 
+    height: 123px;
+}
+
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; 
+    width: auto;
+    background: rgb(215,213,0);
+    background: linear-gradient(59deg, rgba(215,213,0,1) 0%, rgba(250,248,49,1) 5%, rgba(214,214,94,1) 9%, rgba(246,246,132,1) 14%, rgba(251,255,0,1) 16%, rgba(211,215,7,1) 19%, rgba(227,231,29,1) 22%, rgba(242,246,73,1) 24%, rgba(253,255,145,1) 28%, rgba(195,195,10,1) 32%, rgba(247,252,2,1) 35%, rgba(252,255,105,1) 38%, rgba(221,224,25,1) 41%, rgba(227,230,61,1) 43%, rgba(247,246,81,1) 46%, rgba(190,190,33,1) 49%, rgba(230,230,12,1) 52%, rgba(209,209,16,1) 55%, rgba(227,227,48,1) 58%, rgba(238,238,133,1) 61%, rgba(255,254,130,1) 64%, rgba(255,254,160,1) 67%, rgba(228,224,64,1) 70%, rgba(255,250,0,1) 72%, rgba(214,211,33,1) 76%, rgba(214,210,11,1) 80%, rgba(221,219,136,1) 82%, rgba(255,251,66,1) 85%, rgba(221,217,11,1) 89%, rgba(234,231,51,1) 92%, rgba(254,251,110,1) 95%, rgba(245,240,59,1) 97%, rgba(255,252,0,1) 100%);
+
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    border-width: 3px; 
+    border-color: silver; 
+    border-style: groove;
+    height: 500px;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border-width: 3px; 
+    border-color: silver; 
+    border-style: groove;
+}
+
+.fade {
+    animation: fade 1.5s ease-in-out;
+}
+
+.weather-widget {
+            border: 1px solid #ddd;
+            padding: 15px;
+            width: 300px;
+            text-align: center;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        .weather-widget .location {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .weather-widget .temperature {
+            font-size: 48px;
+            font-weight: bold;
+            color: #f39c12;
+        }
+        .weather-widget .description {
+            font-size: 18px;
+            color: #555;
+}
+
+@keyframes fade {
+    from { opacity: 0.4 }
+    to { opacity: 1 }
+}
+
+@font-face {
+  font-family: 'NeverFearFont';
+  src: url('api/Starzoom-Shavian.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.NFTitle {
+    font-family: 'NeverFearFont', sans-serif;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+
+.header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        background-image: url('matrix.gif');
+        width: auto; 
+        background-size: cover;
+}
+
+
+
+.footer {
+    margin-top: auto;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+        color: #fff;
+        padding: 20px 0;
+        flex-shrink: 0;
+        font-size: small;
+        font-weight:100 ;
+        text-decoration: wavy;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .nav {
+        flex-direction: row;
+        padding: 2px;
+    }
+    
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .nav-button {
+        width: 90px;
+        height: 50px;
+        font-size: 10px;
+        flex-direction: row;
+    }
+    
+    .canvas {
+        width: 325px;
+        height: 325px;
+    }
+    
+    .game {
+        width: 325px;
+        height: 325px;
+    }
+    
+    .Pro {
+        width: 325px;
+        height: 325px;
+    }
+}
+
+.canvas {
+	background: #ffffff;
+    border-style: groove;
+    border-width: 3px;
+    border-color: silver;
+}
+
+.controls {
+	text-align: right;
+	color: #aaa;
+	font-size: 25px;
+}

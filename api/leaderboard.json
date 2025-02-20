@@ -1,0 +1,38 @@
+[
+    {
+        "total_kills": 50,
+        "quickest_time": "00:05:10.2",
+        "longest_survival": "00:15:30.0",
+        "total_cash": 300
+    },
+    {
+        "total_kills": 50,
+        "quickest_time": "00:05:10.2",
+        "longest_survival": "00:15:30.0",
+        "total_cash": 300
+    },
+    {
+        "total_kills": 536,
+        "quickest_time": "00:03:10.2",
+        "longest_survival": "00:19:30.0",
+        "total_cash": 300000
+    },
+    {
+        "total_kills": 1235,
+        "quickest_time": "00:10:10.2",
+        "longest_survival": "00:35:30.0",
+        "total_cash": 31556
+    },
+    {
+        "total_kills": 930,
+        "quickest_time": "03:08.021",
+        "longest_survival": "00:00.000",
+        "total_cash": 1289677
+    },
+    {
+        "total_kills": 930,
+        "quickest_time": "03:08.021",
+        "longest_survival": "00:00.000",
+        "total_cash": 1289677
+    }
+]

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Open-Source Coding Community of Central Texas</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../OSCCCT.css">
+<link rel="icon" type="image/png" sizes="32x32" href="/OSCCCTFaviconlarge.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/OSCCCTFavicon.png">
+ <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        table { width: 50%; margin: auto; border-collapse: collapse; background-color: gray; }
+        th, td { padding: 10px; border: 1px solid #ddd; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+  <header class="header">
+      <div class="container">
+       <h1 class="title">Open-Source Coding Community of Central Texas</h1>
+       <a href="../index.html">
+       <img class="logo" src="../OSCCCTLogo.png" alt="Logo" width="150" height="150">
+       </a>
+       <nav class="nav" id="mega-menu">
+  
+  
+  
+      <button class="nav-button" onclick="location.href='../about.html'" style="text-shadow: 1px 1px #000000;">
+  
+        About
+  
+      </button>
+  
+      <button class="nav-button" onclick="location.href='../community.html'" style="text-shadow: 1px 1px #000000;">
+  
+        Community
+  
+      </button>
+    
+      <button class="nav-button" onclick="window.open('https://osccct.notion.site/CONSTITUTION-11148fd216d980e6924fe80c1f04fe26', '_blank')" style="text-shadow: 1px 1px #000000;">
+  
+        Constitution
+  
+      </button>
+  
+  </nav>
+  </div>
+  </header>
+<Main class="scrollable">
+  <div class="container2">
+    <img  class="logo" src="NeverFearIcon.png" alt="NeverFearLogo" width="250" height="250">
+  <h2 class="NFTitle" style="color: #0088ff; font-size: 69px; text-shadow: 2px 2px #66ff00; font-family: NeverFearFont;">NEVERFEAR LEADERBOARDS</h2>
+     <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>CodeName</th>
+                <th>Total Kills</th>
+                <th>Legacy Speedist Speedrun</th>
+                <th>Longest Gauntlet Survival</th>
+                <th>Total $Cash$</th>
+            </tr>
+        </thead>
+        <tbody id="leaderboard-body">
+            <!-- Data will be inserted here -->
+        </tbody>
+    </table>
+   <script>
+async function fetchLeaderboard() {
+    try {
+        const response = await fetch('https://osccct.org/api/get_leaderboard.php');
+        const data = await response.json();
+
+        const leaderboardBody = document.getElementById('leaderboard-body');
+        leaderboardBody.innerHTML = '';
+
+        data.forEach((entry, index) => {
+            const row = `<tr>
+                <td>#${index + 1}</td> <!-- Rank Position -->
+                <td>${entry.player_name}</td>
+                <td>${entry.total_kills}</td>
+                <td>${entry.quickest_time}</td>
+                <td>${entry.longest_survival}</td>
+                <td>${entry.total_cash}</td>
+            </tr>`;
+            leaderboardBody.innerHTML += row;
+        });
+
+    } catch (error) {
+        console.error('Error loading leaderboard:', error);
+    }
+}
+
+fetchLeaderboard();
+</script>
+
+
+
+</div>
+
+
+<footer class="footer">
+  <div style="display: inline-table; left: 100px">
+    <a href="https://github.com/Coding-Community-of-Central-Texas" target="_blank">
+  <img src="../githubicon2.svg" height="40" width="40" alt="githubicon" style="background: transparent; border: none; padding: 25px;"> 
+  </a>
+   <a href="https://discord.gg/jJDa7taZzz" target="_blank">
+  <img src="../discordicon.jpg" height="40" width="40" alt="discordicon" style="border-radius: 45px; border: none; padding: 25px;">
+  </a>
+   <a href="https://www.instagram.com/oscc_ct/?igsh=MTJleWowbGtjM2k3cg%3D%3D#" alt="instagram" target="_blank">
+  <img src="../instagram.avif" height="40" width="40" alt="instagramicon" style="border-radius: 45px; border: none; padding: 25px;">
+  </a>
+  </div>
+  <br>
+    Copyright &copy; 2024 Open-Source Coding Community of Central Texas<br>
+    <p>1001 Leadership Pl</p>
+    <p>Killeen, TX 76542</p>
+    <a href="mailto:OSCCCT@proton.me">OSCCCT@proton.me</a>
+    </footer>
+  
+</Main>
+</body>
+</html>
